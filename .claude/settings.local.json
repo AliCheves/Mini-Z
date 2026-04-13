@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(dir C:\\\\Users\\\\apixe\\\\OneDrive\\\\Documents\\\\Work\\\\Mini-Z SV:*)",
-      "Bash(python3 \"C:/Users/apixe/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/.claude/skills/ui-ux-pro-max/scripts/search.py\" \"motorsport racing RC car dark industrial dashboard\" --design-system -p \"Miniseta RC\" -f markdown)"
-    ]
-  }
-}
