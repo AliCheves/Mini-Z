@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         {/* Logo */}
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoAccent}>MINI</span>SETA
+          <span className={styles.logoAccent}>MINI</span>-Z
           <span className={styles.logoSub}>RC</span>
         </Link>
 

@@ -40,7 +40,7 @@ export default function Login() {
       <div className={styles.card} role="main">
         {/* Logo */}
         <div className={styles.logo}>
-          <span className={styles.logoAccent}>MINI</span>SETA
+          <span className={styles.logoAccent}>MINI</span>-Z
           <span className={styles.logoSub}>RC</span>
         </div>
         <p className={styles.subtitle}>{t('login_subtitle')}</p>
