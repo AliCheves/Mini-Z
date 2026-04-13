@@ -13,7 +13,7 @@ const strings = {
     nav_login:       'Iniciar Sesión',
 
     // Auth
-    login_title:       'Miniseta RC',
+    login_title:       'Mini-Z RC',
     login_subtitle:    'Ingresa a tu cuenta',
     login_email:       'Correo electrónico',
     login_password:    'Contraseña',
@@ -169,7 +169,7 @@ const strings = {
     nav_logout:      'Log Out',
     nav_login:       'Log In',
 
-    login_title:       'Miniseta RC',
+    login_title:       'Mini-Z RC',
     login_subtitle:    'Sign in to your account',
     login_email:       'Email address',
     login_password:    'Password',
@@ -310,12 +310,12 @@ const strings = {
 const LangContext = createContext(null)
 
 export function LangProvider({ children }) {
-  const [lang, setLang] = useState(() => localStorage.getItem('miniseta_lang') || 'es')
+  const [lang, setLang] = useState(() => localStorage.getItem('mini_z_lang') || 'es')
 
   function toggle() {
     const next = lang === 'es' ? 'en' : 'es'
     setLang(next)
-    localStorage.setItem('miniseta_lang', next)
+    localStorage.setItem('mini_z_lang', next)
   }
 
   function t(key) {

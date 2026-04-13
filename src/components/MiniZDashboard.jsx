@@ -1,8 +1,8 @@
 /**
- * MinisetaDashboard.jsx — Design System Reference
+ * MiniZDashboard.jsx — Design System Reference
  *
  * This component is the visual reference / design system showcase for the
- * Miniseta RC application. It is NOT used directly in routing.
+ * Mini-Z RC application. It is NOT used directly in routing.
  *
  * Color tokens:
  *   --accent:  #e8ff00  (neon yellow)
@@ -13,12 +13,12 @@
  * Fonts: Barlow Condensed (headings) · Share Tech Mono (data) · Barlow (body)
  */
 
-import styles from './MinisetaDashboard.module.css'
+import styles from './MiniZDashboard.module.css'
 
-export default function MinisetaDashboard() {
+export default function MiniZDashboard() {
   return (
     <div className={styles.showcase}>
-      <h1 className={styles.heading}>Miniseta RC — Design Reference</h1>
+      <h1 className={styles.heading}>Mini-Z RC — Design Reference</h1>
 
       {/* Color palette */}
       <section>
