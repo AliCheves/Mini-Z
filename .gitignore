@@ -23,3 +23,7 @@ Thumbs.db
 
 # AI
 .claude
+
+#db
+/supabase
+
