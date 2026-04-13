@@ -18,7 +18,7 @@ import styles from './MiniZDashboard.module.css'
 export default function MiniZDashboard() {
   return (
     <div className={styles.showcase}>
-      <h1 className={styles.heading}>Mini-Z RC — Design Reference</h1>
+      <h1 className={styles.heading}>Mini-Z — Design Reference</h1>
 
       {/* Color palette */}
       <section>
