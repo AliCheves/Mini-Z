@@ -25,5 +25,6 @@ Thumbs.db
 .claude
 
 #db
-/supabase
+supabase
+migrations
 
