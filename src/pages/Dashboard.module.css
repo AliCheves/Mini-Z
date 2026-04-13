@@ -1,0 +1,361 @@
+.page {
+  padding: 24px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 12px;
+  letter-spacing: .1em;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.viewAll {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  color: var(--accent3);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  transition: opacity 150ms;
+}
+.viewAll:hover { opacity: .8; }
+
+/* ── Hero section ─────────────────── */
+.heroSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .heroSection { grid-template-columns: 2fr 1fr; }
+}
+
+/* ── Race card ─────────────────────── */
+.raceCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.raceCardGlow {
+  border-color: rgba(232,255,0,.2);
+  box-shadow: inset 0 0 40px rgba(232,255,0,.03);
+}
+
+.raceCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.raceCardEyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent3);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 4px;
+}
+
+.raceCardTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.raceCardRoundOf { font-size: 20px; color: var(--text3); }
+
+.raceCardDate {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+
+.raceCardLocation {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text3);
+  margin-bottom: 16px;
+}
+
+.countdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+.countdownUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.countdownValue {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  color: var(--accent);
+  line-height: 1;
+  font-weight: 400;
+}
+.countdownLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+}
+.countdownSep {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  color: var(--text3);
+  line-height: 1.2;
+  padding-bottom: 14px;
+  margin: 0 2px;
+}
+
+.noData {
+  text-align: center;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 16px 0;
+}
+
+/* ── Stats strip ───────────────────── */
+.statsStrip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.statCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statLabel {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text3);
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── Championship pills ────────────── */
+.pillsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+@media (min-width: 640px) { .pillsRow { grid-template-columns: repeat(4, 1fr); } }
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  transition: all 150ms;
+  position: relative;
+  overflow: hidden;
+}
+.pill::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: var(--border);
+  transition: background 150ms;
+}
+.pillActive { border-color: rgba(232,255,0,.3); background: rgba(232,255,0,.04); }
+.pillActive::before { background: var(--accent); }
+.pillDone::before { background: var(--text3); }
+.pill:hover { border-color: var(--bg4); }
+
+.pillIndex {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--text3);
+  line-height: 1;
+  width: 20px;
+  text-align: center;
+}
+
+.pillInfo { flex: 1; min-width: 0; }
+
+.pillType {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pillDir {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+.pillLive {
+  color: var(--accent);
+  font-size: 10px;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+/* ── Two column layout ─────────────── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) { .twoCol { grid-template-columns: 1fr 1fr; } }
+
+/* ── Starting Grid ──────────────────── */
+.grid {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.gridRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  transition: background 150ms;
+}
+.gridRow:last-child { border-bottom: none; }
+.gridRow:hover { background: var(--bg3); }
+.gridRowPole { background: rgba(232,255,0,.04); }
+
+.gridPos {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text3);
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.gridDriver {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.gridNum {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  flex-shrink: 0;
+}
+
+.gridName {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gridLap {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent3);
+  flex-shrink: 0;
+}
+
+/* ── Mini standings ─────────────────── */
+.miniStandings {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.standingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  transition: background 150ms;
+}
+.standingRow:last-child { border-bottom: none; }
+.standingRow:hover { background: var(--bg3); }
+
+.standingPos {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.standingNum {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  flex-shrink: 0;
+}
+
+.standingName {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.standingPts {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--accent);
+  flex-shrink: 0;
+}

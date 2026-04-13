@@ -1,0 +1,50 @@
+.page { padding: 24px 0 40px; display: flex; flex-direction: column; gap: 24px; }
+
+.header { display: flex; flex-direction: column; gap: 4px; }
+.title { font-size: 28px; }
+.subtitle { font-family: var(--font-mono); font-size: 13px; color: var(--accent3); }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  min-width: 140px;
+  transition: all 150ms;
+  flex-shrink: 0;
+}
+.tab:hover { border-color: var(--bg4); }
+.tabActive { border-color: rgba(232,255,0,.4); background: rgba(232,255,0,.06); }
+
+.tabNum { font-family: var(--font-mono); font-size: 11px; color: var(--text3); }
+.tabLabel {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.tabActive .tabLabel { color: var(--accent); }
+.tabDir { font-family: var(--font-mono); font-size: 10px; color: var(--text3); }
+
+.tableWrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: auto;
+}
+
+@media (max-width: 600px) { .hideSmall { display: none; } }

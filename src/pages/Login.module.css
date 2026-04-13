@@ -1,0 +1,102 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(232,255,0,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232,255,0,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  box-shadow: var(--shadow-lg);
+  animation: slide-up 300ms ease;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.logoAccent { color: var(--accent); }
+.logoSub {
+  font-size: 16px;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  margin-left: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text3);
+  font-size: 13px;
+  margin-bottom: 32px;
+  font-family: var(--font-mono);
+}
+
+.form { display: flex; flex-direction: column; gap: 0; }
+
+.passwordField { position: relative; }
+.passwordInput { padding-right: 44px; }
+.passToggle {
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text3);
+  transition: color 150ms;
+}
+.passToggle:hover { color: var(--text); }
+
+.error {
+  background: rgba(255,60,0,.1);
+  border: 1px solid rgba(255,60,0,.3);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--accent2);
+  margin-bottom: 16px;
+}
+
+.submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+.submit:disabled { opacity: .5; cursor: not-allowed; }
+
+.langToggle {
+  display: block;
+  margin: 20px auto 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  transition: color 150ms;
+}
+.langToggle:hover { color: var(--accent3); }

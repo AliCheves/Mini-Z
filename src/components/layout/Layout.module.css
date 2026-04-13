@@ -1,0 +1,14 @@
+.root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding-bottom: 80px; /* mobile nav clearance */
+}
+
+@media (min-width: 768px) {
+  .main { padding-bottom: 0; }
+}
